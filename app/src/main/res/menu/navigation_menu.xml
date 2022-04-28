@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_account"
+        android:title="Account"/>
+
+    <item
+        android:id="@+id/nav_notification"
+        android:title="Notification"/>
+
+    <item
+        android:id="@+id/nav_my_trade"
+        android:title="MyTrade"/>
+
+    <item
+        android:id="@+id/nav_history"
+        android:title="History"/>
+
+    <item
+        android:id="@+id/nav_request"
+        android:title="Request"/>
+
+    <item
+        android:id="@+id/nav_setting"
+        android:title="Setting"/>
+
+    <item
+        android:id="@+id/nav_help_support"
+        android:title="Help n Support"/>
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout"/>
+
+</menu>
