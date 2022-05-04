@@ -22,7 +22,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:hint="Mobile"
                 android:inputType="textPersonName"
                 android:padding="8dp" />
 
@@ -38,7 +37,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:hint="Id"
                 android:inputType="textPersonName"
                 android:padding="8dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -53,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:hint="Pan"
                 android:inputType="textPersonName"
                 android:padding="8dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -68,7 +65,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:hint="Email"
                 android:inputType="textPersonName"
                 android:padding="8dp" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -83,19 +79,17 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:ems="10"
-                android:hint="Location"
                 android:inputType="textPersonName"
                 android:padding="8dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/edit_acc_frag_update_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="Update"
-            app:backgroundTint="@color/center_btn_color" />
+            android:text="Update" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
