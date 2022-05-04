@@ -6,11 +6,12 @@
     android:layout_height="150dp"
     android:padding="10dp">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/demand_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Demand"
+        app:backgroundTint="@color/center_btn_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

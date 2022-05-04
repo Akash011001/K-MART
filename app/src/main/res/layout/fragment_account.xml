@@ -29,7 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="ID"
+                android:text="ID :"
+                android:textColor="@color/text_color2"
                 android:textSize="20sp" />
 
             <TextView
@@ -37,7 +38,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Mobile No."
+                android:text="Mobile No. :"
+                android:textColor="@color/text_color2"
                 android:textSize="20sp" />
 
             <TextView
@@ -45,7 +47,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="PAN No."
+                android:text="PAN No :"
+                android:textColor="@color/text_color2"
                 android:textSize="20sp" />
 
             <TextView
@@ -53,7 +56,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Email"
+                android:text="Email :"
+                android:textColor="@color/text_color2"
                 android:textSize="20sp" />
 
             <TextView
@@ -61,16 +65,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Location"
+                android:text="Location :"
+                android:textColor="@color/text_color2"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="TextView"
-                android:textSize="20sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -85,7 +83,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="TextView"
                 android:textSize="20sp" />
 
             <TextView
@@ -93,7 +90,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="TextView"
                 android:textSize="20sp" />
 
             <TextView
@@ -101,7 +97,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="TextView"
                 android:textSize="20sp" />
 
             <TextView
@@ -109,7 +104,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="TextView"
                 android:textSize="20sp" />
 
             <TextView
@@ -117,25 +111,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="TextView"
                 android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:text="TextView"
-                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/acc_frag_edit_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:text="Edit"
+        app:backgroundTint="@color/center_btn_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />

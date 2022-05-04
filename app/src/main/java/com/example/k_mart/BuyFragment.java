@@ -90,7 +90,7 @@ public class BuyFragment extends Fragment {
                     public void onClick(View view) {
                         //not
                         d.dismiss();
-                        if(mauth.getUid().equals(s.get(pos).getUid())){
+                        if(!mauth.getUid().equals(s.get(pos).getUid())){
                             Map<String, Object> map = new HashMap<>();
                             map.put("BuyerId", mauth.getUid());
                             map.put("ReqFor", s.get(pos).getUid());
@@ -143,22 +143,24 @@ public class BuyFragment extends Fragment {
             @Override
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException e) {
 
+                if (queryDocumentSnapshots != null) {
                     for (DocumentChange d : queryDocumentSnapshots.getDocumentChanges()) {
                         if (d.getType() == DocumentChange.Type.ADDED) {
                             DataToShow t = new DataToShow();
 
                             //Toast.makeText(getContext(), d.getDocument().getData().get("Image").toString(), Toast.LENGTH_SHORT).show();
 
-                                t.addFirst(d.getDocument().getData().get("Name")+"");
-                                t.addSecond(d.getDocument().getData().get("Location")+"");
-                                t.addThird(d.getDocument().getData().get("Item")+"-Rs"+d.getDocument().getData().get("Price")+" Stock-"+d.getDocument().getData().get("Amount"));
-                                t.addImageUrl(d.getDocument().getData().get("Image")+"");
-                                t.addUid(d.getDocument().getData().get("Uid")+"");
-                                s.add(t);
-                                br.notifyDataSetChanged();
+                            t.addFirst(d.getDocument().getData().get("Name") + "");
+                            t.addSecond(d.getDocument().getData().get("Location") + "");
+                            t.addThird(d.getDocument().getData().get("Item") + "-Rs" + d.getDocument().getData().get("Price") + " Stock-" + d.getDocument().getData().get("Amount"));
+                            t.addImageUrl(d.getDocument().getData().get("Image") + "");
+                            t.addUid(d.getDocument().getData().get("Uid") + "");
+                            s.add(t);
+                            br.notifyDataSetChanged();
 
                         }
                     }
+                }
                 }
 
         });

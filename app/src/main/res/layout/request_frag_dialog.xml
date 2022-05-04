@@ -17,11 +17,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.274" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/req_frag_dialog_accept_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Accept"
+        app:backgroundTint="@color/center_btn_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

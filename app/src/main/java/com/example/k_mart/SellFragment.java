@@ -78,7 +78,7 @@ public class SellFragment extends Fragment {
                         Toast.makeText(getContext(), "sold", Toast.LENGTH_SHORT).show();
                         //not
                         d.dismiss();
-                        if(mauth.getUid().equals(list.get(pos).getUid())){
+                        if(!mauth.getUid().equals(list.get(pos).getUid())){
                             Map<String, Object> map = new HashMap<>();
                             map.put("SellerId", mauth.getUid());
                             map.put("ReqFor", list.get(pos).getUid());

@@ -17,18 +17,24 @@
         app:layout_constraintTop_toBottomOf="@+id/sell_trade_load_img"
         app:layout_constraintVertical_bias="0.16000003">
 
-        <EditText
-            android:id="@+id/sell_trade_item_input"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/shape_border"
-            android:ems="8"
-            android:hint="Item"
-            android:inputType="textPersonName"
-            android:padding="5dp"
-            android:paddingLeft="5dp"
-            android:textColor="@color/input_text"
-            android:textSize="20sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/sell_trade_item_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="8"
+                android:hint="Item"
+                android:inputType="textPersonName"
+                android:padding="5dp"
+                android:paddingLeft="5dp"
+                android:textColor="@color/input_text"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -36,18 +42,24 @@
             android:layout_marginTop="40dp"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/sell_trade_amount_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_border"
-                android:ems="8"
-                android:hint="Amount"
-                android:inputType="number"
-                android:padding="5dp"
-                android:paddingLeft="5dp"
-                android:textColor="@color/input_text"
-                android:textSize="20sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/sell_trade_amount_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:hint="Amount"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/input_text"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <Spinner
                 android:id="@+id/sell_frag_spinner"
@@ -62,18 +74,23 @@
             android:layout_marginTop="30dp"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/sell_trade_pice_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/shape_border"
-                android:ems="8"
-                android:hint="Price"
-                android:inputType="number"
-                android:padding="5dp"
-                android:paddingLeft="5dp"
-                android:textColor="@color/input_text"
-                android:textSize="20sp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/sell_trade_pice_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="8"
+                    android:hint="Price"
+                    android:inputType="number"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/input_text"
+                    android:textSize="20sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <Spinner
                 android:id="@+id/sell_frag_spinner2"
@@ -112,15 +129,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sell_trade_img" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/sell_trade_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Put"
+        app:backgroundTint="@color/center_btn_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sell_trade_load_img"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sell_trade_pice_input" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/sell_trade_frag_cancel_btn"
@@ -129,6 +146,5 @@
         android:text="Cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/sell_trade_load_img"
-        app:layout_constraintTop_toBottomOf="@+id/sell_trade_pice_input" />
+        app:layout_constraintStart_toEndOf="@+id/sell_trade_load_img" />
 </androidx.constraintlayout.widget.ConstraintLayout>

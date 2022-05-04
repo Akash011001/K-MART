@@ -125,6 +125,7 @@ public class RequestFragment extends Fragment {
                             @Override
                             public void onSuccess(Void unused) {
                                Toast.makeText(getContext(), "Trade Successfull", Toast.LENGTH_LONG).show();
+                               getParentFragmentManager().beginTransaction().replace(R.id.frameLayout, new RequestFragment()).commit();
                             }
                         });
                     }
@@ -159,12 +160,16 @@ public class RequestFragment extends Fragment {
                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
 
                                     if (d.getDocument().getData().get("isCompleted").toString().equals("F")) {
-                                        String buyerName = documentSnapshot.getData().get("Name") + "";//want to buy
+                                        String buyerName = documentSnapshot.getData().get("Name") + " wants to buy!";//want to buy
 
                                         t.setFirst(buyerName);
                                         t.setSecond(d.getDocument().getData().get("Item") + "");
                                         t.setTradeId(d.getDocument().getData().get("TradeId") + "");
                                         list.add(t);
+                                        if(noreq.getVisibility()==View.VISIBLE)
+                                        {
+                                            noreq.setVisibility(View.GONE);
+                                        }
                                         adapter.notifyDataSetChanged();
                                     }
                                 }
@@ -177,12 +182,16 @@ public class RequestFragment extends Fragment {
                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
 
                                     if (d.getDocument().getData().get("isCompleted").toString().equals("F")) {
-                                        String sellerName = documentSnapshot.getData().get("Name") + "";//want to sell
+                                        String sellerName = documentSnapshot.getData().get("Name") + " wants to sell!";//want to sell
 
                                         t.setFirst(sellerName);
                                         t.setSecond(d.getDocument().getData().get("Item") + "");
                                         t.setTradeId(d.getDocument().getData().get("TradeId") + "");
                                         list.add(t);
+                                        if(noreq.getVisibility()==View.VISIBLE)
+                                        {
+                                            noreq.setVisibility(View.GONE);
+                                        }
                                         adapter.notifyDataSetChanged();
                                     }
                                 }

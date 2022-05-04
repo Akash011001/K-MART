@@ -41,20 +41,25 @@
                 android:textColor="@color/text_color"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/register_name"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/shape_border"
-                android:elevation="5dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:labelFor="@id/textView3"
-                android:padding="5dp"
-                android:textColor="@color/input_text"
-                android:textSize="20sp"
-                tools:ignore="SpeakableTextPresentCheck" />
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:labelFor="@id/textView3"
+                    android:padding="5dp"
+                    android:textColor="@color/input_text"
+                    android:textSize="20sp"
+                    tools:ignore="SpeakableTextPresentCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/textView4"
@@ -65,19 +70,25 @@
                 android:textColor="@color/text_color"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/register_pan"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/shape_border"
-                android:elevation="5dp"
-                android:ems="10"
-                android:inputType="text"
-                android:labelFor="@id/textView4"
-                android:padding="5dp"
-                android:textColor="@color/input_text"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_pan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:labelFor="@id/textView4"
+                    android:padding="5dp"
+                    android:textColor="@color/input_text"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/textView9"
@@ -88,19 +99,25 @@
                 android:textColor="@color/text_color"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/register_mobile"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/shape_border"
-                android:elevation="5dp"
-                android:ems="10"
-                android:inputType="phone"
-                android:labelFor="@id/textView9"
-                android:padding="5dp"
-                android:textColor="@color/input_text"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:labelFor="@id/textView9"
+                    android:padding="5dp"
+                    android:textColor="@color/input_text"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/textView10"
@@ -112,19 +129,25 @@
                 android:textSize="20sp"
                 android:visibility="visible" />
 
-            <EditText
-                android:id="@+id/register_email"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/shape_border"
-                android:elevation="5dp"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:labelFor="@id/textView10"
-                android:padding="5dp"
-                android:textColor="@color/input_text"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:labelFor="@id/textView10"
+                    android:padding="5dp"
+                    android:textColor="@color/input_text"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <TextView
                 android:id="@+id/textView11"
@@ -135,28 +158,36 @@
                 android:textColor="@color/text_color"
                 android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/register_location"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/shape_border"
-                android:elevation="5dp"
-                android:ems="10"
-                android:inputType="textPostalAddress"
-                android:labelFor="@id/textView11"
-                android:padding="5dp"
-                android:textColor="@color/input_text"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content">
 
-            <Button
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/register_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:ems="10"
+                    android:inputType="textPostalAddress"
+                    android:labelFor="@id/textView11"
+                    android:padding="5dp"
+                    android:textColor="@color/input_text"
+                    android:textSize="20sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/verify_btn_Registration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
                 android:layout_marginTop="15dp"
                 android:text="Verify"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                app:backgroundTint="@color/center_btn_color" />
 
         </LinearLayout>
     </ScrollView>

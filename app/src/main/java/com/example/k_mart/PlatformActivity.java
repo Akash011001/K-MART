@@ -45,7 +45,11 @@ public class PlatformActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        loadFragment(new MainFragment());
+        if(mauth.getCurrentUser()!=null)
+        {
+            loadFragment(new MainFragment());
+        }
+
 
         nv = (NavigationView) findViewById(R.id.navigation_platform);
         nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -58,17 +62,13 @@ public class PlatformActivity extends AppCompatActivity {
                         loadFragment(new MainFragment());
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    
-                    case R.id.nav_setting:
-
-                        break;
 
                     case R.id.nav_logout:
 
-                        mauth.signOut();
                         Intent i = new Intent(PlatformActivity.this, MainActivity.class);
                         startActivity(i);
-                        finish();
+                        mauth.signOut();
+                        //System.exit(0);
                         break;
 
                     case R.id.nav_request:
@@ -91,11 +91,23 @@ public class PlatformActivity extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
+                    case R.id.nav_help_support:
+                        loadFragment(new HelpSupportFragment());
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
+                    case R.id.nav_notification:
+                        loadFragment(new NotificationFragment());
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+
                 }
                 return true;
             }
         });
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

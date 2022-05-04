@@ -126,7 +126,7 @@ public class HistoryFragment extends Fragment {
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
 
                                 if (d.getDocument().getData().get("isCompleted").toString().equals("T")) {
-                                    String buyerName = documentSnapshot.getData().get("Name") + "";
+                                    String buyerName = documentSnapshot.getData().get("Name") + " (Purchased)";
 
                                     t.setFirst(buyerName);
                                     t.setSecond(d.getDocument().getData().get("Item") + "");
@@ -161,7 +161,7 @@ public class HistoryFragment extends Fragment {
                             public void onSuccess(DocumentSnapshot documentSnapshot) {
 
                                 if (d.getDocument().getData().get("isCompleted").toString().equals("T")) {
-                                    String buyerName = documentSnapshot.getData().get("Name") + "";
+                                    String buyerName = documentSnapshot.getData().get("Name") + " (Sold)";
 
                                     t.setFirst(buyerName);
                                     t.setSecond(d.getDocument().getData().get("Item") + "");

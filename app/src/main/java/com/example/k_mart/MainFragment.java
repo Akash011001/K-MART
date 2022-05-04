@@ -14,8 +14,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainFragment extends Fragment {
     Button buybtn,sellBtn,addBtn;
+    FirebaseAuth mauth;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.main_fragment, container, false);
@@ -28,7 +31,12 @@ public class MainFragment extends Fragment {
         sellBtn = (Button) view.findViewById(R.id.sell_button_main_frag);
         addBtn = (Button) view.findViewById(R.id.add_button_main_frag);
 
-        loadChildFragment(new BuyFragment());
+        mauth = FirebaseAuth.getInstance();
+
+        if(mauth.getCurrentUser()!=null){
+            loadChildFragment(new BuyFragment());
+        }
+
         sellBtn.setBackgroundColor(Color.parseColor("#1A759F"));
         buybtn.setBackgroundColor(Color.parseColor("#52B69A"));
         buybtn.setOnClickListener(new View.OnClickListener() {
